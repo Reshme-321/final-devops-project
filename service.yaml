@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: final-devops-service
+
+spec:
+  selector:
+    app: final-devops
+
+  ports:
+  - port: 80
+    targetPort: 80
+
+  type: NodePort

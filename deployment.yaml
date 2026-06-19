@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: final-devops
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: final-devops
+
+  template:
+    metadata:
+      labels:
+        app: final-devops
+
+    spec:
+      containers:
+      - name: final-devops
+ 
+        image: 574644334284.dkr.ecr.ap-south-1.amazonaws.com/final-devops:v1
+     
+        ports:
+        - containerPort: 80
